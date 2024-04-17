@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        
+            <!-- dependent Class -->
+            
+            <bean class="java.util.Date" id="udate"></bean>
+
+
+            <!-- target Class -->
+            
+            <bean class="com.Spring.beans.MassageGenerator" id="msgen">
+            
+            
+            <property name="date" ref="udate"></property>
+            
+            </bean>
+
+</beans>
